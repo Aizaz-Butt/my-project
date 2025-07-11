@@ -29,6 +29,24 @@ jobs:
           echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
 
-      - name: Copy build files to EC2 manually
+      - name: Test SSH Connection
         run: |
-          scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -r build/* ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/var/www/html/
+          echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh -T -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}
+
+      - name: Copy build files to EC2
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          source: "build/."
+          target: "/var/www/html" # adjust path on your server
+
+      - name: Move Files to html folder
+        run: |
+          run: |
+          echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh -T -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} "cd /var/www/html/build && sudo mv * ../ && cd .. && sudo rm -rf build"
