@@ -43,10 +43,3 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           source: "build/."
           target: "/var/www/html" # adjust path on your server
-
-      - name: Move Files to html folder
-        run: |
-          run: |
-          echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh -T -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} "cd /var/www/html/build && sudo mv * ../ && cd .. && sudo rm -rf build"
