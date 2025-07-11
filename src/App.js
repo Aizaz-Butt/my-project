@@ -11,7 +11,7 @@ function App() {
         fontSize: "2rem",
       }}
     >
-      My first website yoo hoo...
+      kia baat ha
     </div>
   );
 }
