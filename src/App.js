@@ -11,7 +11,7 @@ function App() {
         fontSize: "2rem",
       }}
     >
-      kia baat ha
+      kia baat ha...
     </div>
   );
 }
