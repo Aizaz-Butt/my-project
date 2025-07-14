@@ -11,7 +11,7 @@ function App() {
         fontSize: "2rem",
       }}
     >
-     checking for cache busting
+Manan khota 
     </div>
   );
 }
