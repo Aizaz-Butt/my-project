@@ -11,7 +11,7 @@ function App() {
         fontSize: "2rem",
       }}
     >
-Manan khota 
+Kaun Talha??
     </div>
   );
 }
