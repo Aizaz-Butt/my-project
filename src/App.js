@@ -11,7 +11,7 @@ function App() {
         fontSize: "2rem",
       }}
     >
-Kaun Talha??
+      East and west you are best!
     </div>
   );
 }
