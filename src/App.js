@@ -11,7 +11,7 @@ function App() {
         fontSize: "2rem",
       }}
     >
-      kia baat ha s3 ki...
+     checking for cache busting
     </div>
   );
 }
