@@ -90,7 +90,6 @@ const Footer = () => {
               © {new Date().getFullYear()} Aizaz Butt. All rights reserved.
             </p>
             <p className="text-sm text-muted-foreground flex items-center gap-1">
-              Built with <Heart className="h-4 w-4 text-red-500" /> using React & TypeScript
             </p>
           </div>
         </div>
