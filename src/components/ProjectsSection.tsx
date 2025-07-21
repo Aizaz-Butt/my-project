@@ -72,13 +72,13 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="py-20 bg-section-bg">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Featured Projects
           </h2>
-          <p className="text-lg text-muted-foreground">
+          {/* <p className="text-lg text-muted-foreground">
             A showcase of my professional projects and technical expertise
-          </p>
+          </p> */}
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -148,7 +148,7 @@ const ProjectsSection = () => {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex gap-2 pt-2">
+                {/* <div className="flex gap-2 pt-2">
                   <Button variant="default" size="sm" asChild className="flex-1">
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="mr-2 h-4 w-4" />
@@ -161,19 +161,19 @@ const ProjectsSection = () => {
                       Source Code
                     </a>
                   </Button>
-                </div>
+                </div> */}
               </CardContent>
             </Card>
           ))}
         </div>
 
         {/* View More Projects */}
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <Button variant="outline" size="lg">
             <Github className="mr-2 h-4 w-4" />
             View More Projects on GitHub
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -7,7 +7,7 @@ const ExperienceSection = () => {
     {
       title: 'Frontend Developer',
       company: 'EmbraceIT',
-      location: 'Remote',
+      location: 'On-site',
       period: 'Jan 2022 - Present',
       type: 'Full-time',
       description: [
@@ -22,7 +22,7 @@ const ExperienceSection = () => {
     {
       title: 'Frontend Intern',
       company: 'EmbraceIT',
-      location: 'Remote',
+      location: 'On-site',
       period: 'Sep 2021 - Dec 2021',
       type: 'Internship',
       description: [
@@ -36,7 +36,7 @@ const ExperienceSection = () => {
     {
       title: 'Software Engineer Intern',
       company: 'Amco IT',
-      location: 'Remote',
+     location: 'On-site',
       period: 'May 2021 - Aug 2021',
       type: 'Internship',
       description: [
@@ -50,13 +50,13 @@ const ExperienceSection = () => {
   return (
     <section id="experience" className="py-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Work Experience
           </h2>
-          <p className="text-lg text-muted-foreground">
+          {/* <p className="text-lg text-muted-foreground">
             My professional journey and the impact I've made
-          </p>
+          </p> */}
         </div>
 
         <div className="space-y-8">

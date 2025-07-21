@@ -73,13 +73,13 @@ const SkillsSection = () => {
   return (
     <section id="skills" className="py-20 bg-section-bg">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Technical Skills
           </h2>
-          <p className="text-lg text-muted-foreground">
+          {/* <p className="text-lg text-muted-foreground">
             Technologies and tools I work with to bring ideas to life
-          </p>
+          </p> */}
         </div>
 
         {/* Skill Categories */}

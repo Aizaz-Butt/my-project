@@ -55,6 +55,7 @@ const HeroSection = () => {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-hero-gradient-from to-hero-gradient-to hover:from-hero-gradient-from/90 hover:to-hero-gradient-to/90 text-white"
+              onClick={() => window.location.href = 'mailto:aizazbutt.22@gmail.com'}
             >
               <Mail className="mr-2 h-4 w-4" />
               Get In Touch
@@ -66,7 +67,7 @@ const HeroSection = () => {
           </div>
 
           {/* Scroll indicator */}
-          <div className="pt-8">
+          {/* <div className="pt-8">
             <button
               onClick={scrollToNext}
               className="animate-bounce hover:text-primary transition-colors duration-200"
@@ -74,7 +75,7 @@ const HeroSection = () => {
             >
               <ArrowDown className="h-6 w-6 mx-auto" />
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

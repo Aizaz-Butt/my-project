@@ -1,10 +1,11 @@
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Mail, Twitter, Heart } from 'lucide-react';
+import { Linkedin, Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/aizaz-butt-b5b64621b/', icon: Linkedin },
     { name: 'Email', href: 'mailto:aizazbutt.22@gmail.com', icon: Mail },
+    { name: 'Number', href: 'tel:+923237355533', icon: Phone },
   ];
 
   const scrollToTop = () => {
@@ -49,7 +50,7 @@ const Footer = () => {
           {/* Social Links */}
           <div className="space-y-4">
             <h4 className="font-semibold text-foreground">Connect</h4>
-            <div className="flex space-x-4">
+            <div className="flex">
               {socialLinks.map((link) => {
                 const Icon = link.icon;
                 return (
