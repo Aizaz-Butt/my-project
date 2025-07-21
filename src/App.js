@@ -11,7 +11,7 @@ function App() {
         fontSize: "2rem",
       }}
     >
-      East and west you are best!
+      waoo
     </div>
   );
 }
