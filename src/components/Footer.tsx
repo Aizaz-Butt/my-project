@@ -29,7 +29,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div className="space-y-4">
             <h4 className="font-semibold text-foreground">Quick Links</h4>
-            <div className="space-y-2">
+            <div className="flex flex-wrap gap-8 w-2/3">
               {['About', 'Experience', 'Skills', 'Education', 'Projects'].map((item) => (
                 <button
                   key={item}

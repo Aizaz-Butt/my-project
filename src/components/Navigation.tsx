@@ -14,6 +14,7 @@ const Navigation = () => {
     { name: "Skills", href: "#skills" },
     { name: "Education", href: "#education" },
     { name: "Projects", href: "#projects" },
+    { name: "CV", href: "#cv", openInNewTab: true },
   ];
 
   useEffect(() => {
@@ -24,6 +25,15 @@ const Navigation = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleNavClick = (item: typeof navItems[0]) => {
+    if (item.openInNewTab) {
+      window.open("/cv.html", "_blank");
+      setIsMenuOpen(false);
+    } else {
+      scrollToSection(item.href);
+    }
+  };
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -56,7 +66,7 @@ const Navigation = () => {
               {navItems.map((item) => (
                 <button
                   key={item.name}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavClick(item)}
                   className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
                 >
                   {item.name}
@@ -103,7 +113,7 @@ const Navigation = () => {
               {navItems.map((item) => (
                 <button
                   key={item.name}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavClick(item)}
                   className="block w-full text-left px-3 py-2 text-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors duration-200"
                 >
                   {item.name}

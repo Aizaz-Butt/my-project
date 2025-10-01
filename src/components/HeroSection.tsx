@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowDown, Download, Mail } from 'lucide-react';
+import { Mail, Download } from 'lucide-react';
 
 const HeroSection = () => {
   const scrollToNext = () => {
@@ -60,7 +60,19 @@ const HeroSection = () => {
               <Mail className="mr-2 h-4 w-4" />
               Get In Touch
             </Button>
-            <Button variant="outline" size="lg">
+            {/* <DownloadCV /> */}
+            <Button variant="outline" size="lg"
+            
+            onClick={()=> {
+               const link = document.createElement("a");
+                link.href = "/AizazButtCV.pdf"; // make sure it's in public/resume.pdf
+                link.download = "Aizaz-Resume.pdf"; // file name for download
+                link.click();
+            }}
+            // onClick={()=> {
+            //     window.open("/cv.html", "_blank");
+            // }}
+            >
               <Download className="mr-2 h-4 w-4" />
               Download CV
             </Button>
